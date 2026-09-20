@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors - CarePlus Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">CarePlus <span>Hospital</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="services.html" target="_blank">Services</a></li>
+                <li><a href="doctors.html" target="_blank">Doctors</a></li>
+                <li><a href="appointment.html" target="_blank">Book Appointment</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-banner">
+        <h1>Our Doctors</h1>
+        <p>Meet our team and see when they're available</p>
+    </section>
+
+    <main>
+        <section class="menu-section">
+            <h2>Filter by Department</h2>
+            <!-- This dropdown is filled with categories by JavaScript,
+                 and filters the doctor cards below when changed -->
+            <label for="category-filter">Department</label>
+            <select id="category-filter">
+                <option value="all">All Departments</option>
+            </select>
+        </section>
+
+        <section class="highlights">
+            <!-- Doctor cards are inserted here by JavaScript -->
+            <div class="highlight-cards" id="doctor-cards-container">
+                <!-- JS fills this in on page load -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CarePlus Hospital. All Rights Reserved.</p>
+        <p>123 Health Avenue, Nnewi, Anambra State | +234 803 555 1234</p>
+    </footer>
+
+    <!-- Load the shared doctor data first, then the page script that uses it -->
+    <script src="js/doctors-data.js"></script>
+    <script src="js/doctors-page.js"></script>
+</body>
+</html>

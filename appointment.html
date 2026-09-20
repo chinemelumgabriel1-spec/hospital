@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment - Lifeline Medical Centre</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <span>📞 +234 801 234 5678</span>
+        <span>✉️ info@lifelinemedical.com</span>
+        <span>🕒 Mon - Sat: 8:00 AM - 8:00 PM</span>
+    </div>
+
+    <header>
+        <div class="logo">Lifeline <span>Medical Centre</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="services.html" target="_blank">Services</a></li>
+                <li><a href="doctors.html" target="_blank">Doctors</a></li>
+                <li><a href="schedule.html" target="_blank">Schedule</a></li>
+                <li><a href="appointment.html" target="_blank">Book Appointment</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-banner">
+        <h1>Book an Appointment</h1>
+        <p>Fill the form and we'll confirm your slot within 24 hours</p>
+    </section>
+
+    <main>
+        <section class="form-section">
+            <form action="appointment-success.html" method="POST">
+
+                <!-- Patient Information -->
+                <fieldset>
+                    <legend>Patient Information</legend>
+
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="080XXXXXXXX" required>
+
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="female" required> Female</label>
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="other"> Prefer not to say</label>
+                    </div>
+
+                    <label for="address">Home Address</label>
+                    <input type="text" id="address" name="address" placeholder="Street, town, state">
+                </fieldset>
+
+                <!-- Appointment Details -->
+                <fieldset>
+                    <legend>Appointment Details</legend>
+
+                    <label for="patient-type">Are you a new or returning patient?</label>
+                    <select id="patient-type" name="patient-type" required>
+                        <option value="">-- Select an option --</option>
+                        <option value="new">New Patient</option>
+                        <option value="returning">Returning Patient</option>
+                    </select>
+
+                    <label for="department">Department / Doctor Category</label>
+                    <select id="department" name="department" required>
+                        <option value="">-- Select a department --</option>
+                        <option value="general">General Medicine</option>
+                        <option value="paediatrics">Paediatrics</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="gynaecology">Obstetrics &amp; Gynaecology</option>
+                        <option value="dentistry">Dentistry</option>
+                        <option value="ophthalmology">Ophthalmology</option>
+                        <option value="orthopaedics">Orthopaedics</option>
+                        <option value="laboratory">Laboratory &amp; Diagnostics</option>
+                    </select>
+
+                    <label for="doctor">Preferred Doctor</label>
+                    <select id="doctor" name="doctor">
+                        <option value="">-- No preference --</option>
+                        <option value="obi">Dr. Chukwuemeka Obi (General, Mon/Tue/Thu 8AM-2PM)</option>
+                        <option value="adeyemi">Dr. Ngozi Adeyemi (Paediatrics, Mon/Wed/Fri 9AM-3PM)</option>
+                        <option value="musa">Dr. Ibrahim Musa (Cardiology, Tue/Thu 10AM-4PM)</option>
+                        <option value="eze">Dr. Blessing Eze (Gynaecology, Mon-Fri 8AM-1PM)</option>
+                        <option value="bakare">Dr. Tunde Bakare (Dentistry, Wed/Fri/Sat 10AM-4PM)</option>
+                        <option value="nwosu">Dr. Amaka Nwosu (Ophthalmology, Tue/Thu/Sat 9AM-2PM)</option>
+                        <option value="okafor">Dr. Samuel Okafor (Orthopaedics, Mon/Wed 11AM-5PM)</option>
+                        <option value="sani">Dr. Fatima Sani (General, Mon-Fri 3PM-8PM)</option>
+                    </select>
+
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="session">Preferred Session</label>
+                    <select id="session" name="session" required>
+                        <option value="">-- Select a session --</option>
+                        <option value="morning">Morning (8:00 AM - 12:00 PM)</option>
+                        <option value="afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
+                        <option value="evening">Evening (4:00 PM - 8:00 PM)</option>
+                    </select>
+
+                    <label for="time">Preferred Time</label>
+                    <input type="time" id="time" name="time">
+
+                    <label for="visit-type">Type of Visit</label>
+                    <select id="visit-type" name="visit-type" required>
+                        <option value="">-- Select visit type --</option>
+                        <option value="consultation">General Consultation</option>
+                        <option value="follow-up">Follow-up Visit</option>
+                        <option value="test">Laboratory Test</option>
+                        <option value="checkup">Routine Check-up</option>
+                        <option value="vaccination">Vaccination / Immunisation</option>
+                    </select>
+                </fieldset>
+
+                <!-- Reason for Visit -->
+                <fieldset>
+                    <legend>Reason for Visit</legend>
+
+                    <label for="symptoms">Describe your symptoms or reason for the visit</label>
+                    <textarea id="symptoms" name="symptoms" rows="5"
+                        placeholder="Briefly describe what brings you in"></textarea>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="first-visit" value="yes">
+                        This is my first visit to Lifeline Medical Centre
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="reminder" value="yes">
+                        Send me an SMS reminder before my appointment
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="consent" value="yes" required>
+                        I confirm the information provided is accurate
+                    </label>
+                </fieldset>
+
+                <button type="submit">Submit Appointment Request</button>
+            </form>
+        </section>
+
+        <section class="note-section">
+            <h2>Before You Book</h2>
+            <ul class="feature-list">
+                <li>Check the <a href="schedule.html">doctor schedule</a> to confirm your chosen doctor works on your preferred day.</li>
+                <li>Appointment requests are confirmed by phone or email within 24 hours.</li>
+                <li>For emergencies, do not use this form &mdash; call <strong>+234 801 234 5678</strong> immediately.</li>
+                <li>Arrive 15 minutes early with a valid ID and any previous medical records.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div>
+                <h4>Lifeline Medical Centre</h4>
+                <p>Committed to accessible, quality healthcare for every patient.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="schedule.html">Doctor Schedule</a></li>
+                    <li><a href="appointment.html">Book Appointment</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>15 Hospital Road, Nnewi, Anambra State</p>
+                <p>+234 801 234 5678</p>
+                <p>info@lifelinemedical.com</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Lifeline Medical Centre. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
