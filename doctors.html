@@ -3,55 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Doctors - CarePlus Hospital</title>
+    <title>Our Doctors - Lifeline Medical Centre</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <div class="top-bar">
+        <span>📞 +234 801 234 5678</span>
+        <span>✉️ info@lifelinemedical.com</span>
+        <span>🕒 Mon - Sat: 8:00 AM - 8:00 PM</span>
+    </div>
+
     <header>
-        <div class="logo">CarePlus <span>Hospital</span></div>
+        <div class="logo">Lifeline <span>Medical Centre</span></div>
         <nav>
             <ul>
-                <li><a href="index.html" target="_blank">Home</a></li>
-                <li><a href="services.html" target="_blank">Services</a></li>
-                <li><a href="doctors.html" target="_blank">Doctors</a></li>
-                <li><a href="appointment.html" target="_blank">Book Appointment</a></li>
-                <li><a href="contact.html" target="_blank">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="doctors.html">Doctors</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="appointment.html">Book Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="page-banner">
         <h1>Our Doctors</h1>
-        <p>Meet our team and see when they're available</p>
+        <p>Meet the specialists caring for you</p>
     </section>
 
     <main>
-        <section class="menu-section">
-            <h2>Filter by Department</h2>
-            <!-- This dropdown is filled with categories by JavaScript,
-                 and filters the doctor cards below when changed -->
-            <label for="category-filter">Department</label>
-            <select id="category-filter">
-                <option value="all">All Departments</option>
-            </select>
+        <!-- Doctor Categories -->
+        <section>
+            <h2>Doctor Categories</h2>
+            <p>Our medical team is organised into the following specialist categories. Select the
+                category that matches your need when booking an appointment.</p>
+            <div class="category-grid">
+                <div class="category-box">General Practitioners</div>
+                <div class="category-box">Paediatricians</div>
+                <div class="category-box">Cardiologists</div>
+                <div class="category-box">Gynaecologists</div>
+                <div class="category-box">Dentists</div>
+                <div class="category-box">Ophthalmologists</div>
+                <div class="category-box">Orthopaedic Surgeons</div>
+                <div class="category-box">Laboratory Scientists</div>
+            </div>
         </section>
 
-        <section class="highlights">
-            <!-- Doctor cards are inserted here by JavaScript -->
-            <div class="highlight-cards" id="doctor-cards-container">
-                <!-- JS fills this in on page load -->
+        <!-- Doctor Profiles -->
+        <section>
+            <h2>Meet the Team</h2>
+            <div class="card-grid">
+                <div class="doctor-card">
+                    <img src="images/doctor1.jpg" alt="Dr. Chukwuemeka Obi">
+                    <h3>Dr. Chukwuemeka Obi</h3>
+                    <p class="specialty">General Practitioner</p>
+                    <p>MBBS, 12 years experience in family and general medicine.</p>
+                    <p class="availability">Available: Mon, Tue, Thu &mdash; 8:00 AM to 2:00 PM</p>
+                </div>
+                <div class="doctor-card">
+                    <img src="images/doctor2.jpg" alt="Dr. Ngozi Adeyemi">
+                    <h3>Dr. Ngozi Adeyemi</h3>
+                    <p class="specialty">Paediatrician</p>
+                    <p>MBBS, FWACP. Specialist in child health and immunisation.</p>
+                    <p class="availability">Available: Mon, Wed, Fri &mdash; 9:00 AM to 3:00 PM</p>
+                </div>
+                <div class="doctor-card">
+                    <img src="images/doctor3.jpg" alt="Dr. Ibrahim Musa">
+                    <h3>Dr. Ibrahim Musa</h3>
+                    <p class="specialty">Cardiologist</p>
+                    <p>MBBS, FMCP. Consultant in cardiovascular medicine.</p>
+                    <p class="availability">Available: Tue, Thu &mdash; 10:00 AM to 4:00 PM</p>
+                </div>
+                <div class="doctor-card">
+                    <img src="images/doctor4.jpg" alt="Dr. Blessing Eze">
+                    <h3>Dr. Blessing Eze</h3>
+                    <p class="specialty">Gynaecologist</p>
+                    <p>MBBS, FWACS. Antenatal care and women's health.</p>
+                    <p class="availability">Available: Mon to Fri &mdash; 8:00 AM to 1:00 PM</p>
+                </div>
+                <div class="doctor-card">
+                    <img src="images/doctor5.jpg" alt="Dr. Tunde Bakare">
+                    <h3>Dr. Tunde Bakare</h3>
+                    <p class="specialty">Dentist</p>
+                    <p>BDS. Preventive and restorative dental care.</p>
+                    <p class="availability">Available: Wed, Fri, Sat &mdash; 10:00 AM to 4:00 PM</p>
+                </div>
+                <div class="doctor-card">
+                    <img src="images/doctor6.jpg" alt="Dr. Amaka Nwosu">
+                    <h3>Dr. Amaka Nwosu</h3>
+                    <p class="specialty">Ophthalmologist</p>
+                    <p>MBBS, FWACS. Eye care, vision testing and glaucoma screening.</p>
+                    <p class="availability">Available: Tue, Thu, Sat &mdash; 9:00 AM to 2:00 PM</p>
+                </div>
+                <div class="doctor-card">
+                    <img src="images/doctor7.jpg" alt="Dr. Samuel Okafor">
+                    <h3>Dr. Samuel Okafor</h3>
+                    <p class="specialty">Orthopaedic Surgeon</p>
+                    <p>MBBS, FMCS. Bone, joint and fracture management.</p>
+                    <p class="availability">Available: Mon, Wed &mdash; 11:00 AM to 5:00 PM</p>
+                </div>
+                <div class="doctor-card">
+                    <img src="images/doctor8.jpg" alt="Dr. Fatima Sani">
+                    <h3>Dr. Fatima Sani</h3>
+                    <p class="specialty">General Practitioner</p>
+                    <p>MBBS. Evening clinic consultations and routine care.</p>
+                    <p class="availability">Available: Mon to Fri &mdash; 3:00 PM to 8:00 PM</p>
+                </div>
             </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Found the Right Specialist?</h2>
+            <p>Check the full weekly schedule or go straight to booking.</p>
+            <a href="schedule.html" class="btn-secondary">View Schedule</a>
+            <a href="appointment.html" class="btn">Book Appointment</a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 CarePlus Hospital. All Rights Reserved.</p>
-        <p>123 Health Avenue, Nnewi, Anambra State | +234 803 555 1234</p>
+        <div class="footer-columns">
+            <div>
+                <h4>Lifeline Medical Centre</h4>
+                <p>Committed to accessible, quality healthcare for every patient.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="schedule.html">Doctor Schedule</a></li>
+                    <li><a href="appointment.html">Book Appointment</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>15 Hospital Road, Nnewi, Anambra State</p>
+                <p>+234 801 234 5678</p>
+                <p>info@lifelinemedical.com</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Lifeline Medical Centre. All Rights Reserved.</p>
     </footer>
 
-    <!-- Load the shared doctor data first, then the page script that uses it -->
-    <script src="js/doctors-data.js"></script>
-    <script src="js/doctors-page.js"></script>
 </body>
 </html>
